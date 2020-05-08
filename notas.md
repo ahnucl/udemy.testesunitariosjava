@@ -364,6 +364,7 @@ método void -> no spy o padrão é executar o método
 
 - Duas sintaxes para mock: Mockito.when(Mock.medoto()).thenReturn ou Mockito.doReturn(algo).when(Mock).metodoDoClasseReal()
 > a segunda sintaxe é mais completa, e permita mockar métodos que retornam null com o doNothing(); além disso, na primeira sintaxe o Java identifica uma chamada real de método, na segunda, como há separação, não há chamada real mas o Mockito entende o recurso
+> a sintaxe mais "popular" é when/thenReturn, mas ela tem problemas com Spies e métodos void
 
 ## PowerMock
 
