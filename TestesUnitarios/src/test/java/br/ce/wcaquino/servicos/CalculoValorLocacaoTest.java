@@ -18,7 +18,6 @@ import org.junit.runners.Parameterized.Parameter;
 import org.junit.runners.Parameterized.Parameters;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
 import br.ce.wcaquino.daos.LocacaoDAO;
@@ -81,12 +80,12 @@ public class CalculoValorLocacaoTest {
 	@Parameters(name="{2}")
 	public static Collection<Object[]> getParametros(){
 		return Arrays.asList(new Object[][] {
-			{Arrays.asList( filme1, filme1), 200.0, "2 Filmes: Sem Desconto"},
-			{Arrays.asList( filme1, filme1, filme3), 275.0, "3 Filmes: 25%"}, // funciona porque o tipo é Object e tanto List como Integer herdam dela
-			{Arrays.asList( filme1, filme1, filme3, filme4), 325.0, "4 Filmes: 50%"},
-			{Arrays.asList( filme1, filme1, filme3, filme4, filme5), 350.0, "5 Filmes: 75%"},
-			{Arrays.asList( filme1, filme1, filme3, filme4, filme5, filme6), 350.0, "6 Filmes: 100%"},
-			{Arrays.asList( filme1, filme1, filme3, filme4, filme5, filme6, filme7), 450.0, "7 Filmes: Sem Desconto"}
+			{Arrays.asList( filme1, filme2), 200.0, "2 Filmes: Sem Desconto"},
+			{Arrays.asList( filme1, filme2, filme3), 275.0, "3 Filmes: 25%"}, // funciona porque o tipo é Object e tanto List como Integer herdam dela
+			{Arrays.asList( filme1, filme2, filme3, filme4), 325.0, "4 Filmes: 50%"},
+			{Arrays.asList( filme1, filme2, filme3, filme4, filme5), 350.0, "5 Filmes: 75%"},
+			{Arrays.asList( filme1, filme2, filme3, filme4, filme5, filme6), 350.0, "6 Filmes: 100%"},
+			{Arrays.asList( filme1, filme2, filme3, filme4, filme5, filme6, filme7), 450.0, "7 Filmes: Sem Desconto"}
 		});
 	}
 	
